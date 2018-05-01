@@ -4,16 +4,13 @@ want really,
 
 * The stand has an inventory, which is populated when a new stand is created.
 * As sales are made, items in the inventory are consumed and sales totals and quantities arae calculated
-* 
-
 """
 
 class Stand():
     """Represents a Stand that sells something
 
     Arguments:
-
-    inventory -- An inventory object that contains the various ingredients available to the stand.
+    inventory -- An dict of {string: int} pairs that represent ingredients available to the stand.
 
     """
     class Inventory():
@@ -31,7 +28,7 @@ class Stand():
 
         def add_item( self, item_name, item_qty ):
             """Add an item and its quantity to the inventory. If it already exists, increment its quantity.
-               Returns the inventory {item:qty} dict of the item and quantity added { string: int }
+               Returns the inventory {item:qty} dict of the item and the new quantity available { string: int }
             """
             if item_name in self.items.keys():
                 # Increment the quantity if it already exists
