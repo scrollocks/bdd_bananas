@@ -84,9 +84,7 @@ class Stand():
             self.inventory.use_items( recipe )
             self.total_sales += sale_price
             self.total_products_sold += 1
-            print( "Sold a product!" )
             return True
-        print( "Not enough inventory for the sale!" )
         return False
 
     def __repr__( self ):
