@@ -17,3 +17,4 @@ Feature: Keep track of total sales
         | choc    | 1  |
       When we sell 5 frozen bananas at 4.50 each 
       Then we will have total sales of 4.50
+
